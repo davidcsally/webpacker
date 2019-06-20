@@ -274,7 +274,7 @@ For the full configuration options of SplitChunks, see the [Webpack documentatio
 environment.splitChunks()
 
 // or using custom config
-environment.splitChunks((config) => Object.assign({}, config, { optimization: { splitChunks: false }}))
+environment.splitChunks(config => ({ ...config, { optimization: { splitChunks: false } } })
 ```
 
 Then use, `javascript_packs_with_chunks_tag` helper to include all the transpiled
